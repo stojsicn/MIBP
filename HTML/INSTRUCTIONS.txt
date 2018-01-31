@@ -1,0 +1,22 @@
+.star-rating {
+    direction: rtl; //right to left kako idu zvezdice
+    display: block; //displejuje elemenat kao block. Pocinje u novom redu i zauzima ceo width
+    padding: 0px;
+}
+
+.star-rating input[type="radio"] {
+    display: none; //ne zelimo da korisnik vidi kruzic da je oznacio zvezdicu
+}
+
+.star-rating label { //label je ustvari sto pise ispod koliko je vredno
+    color: #bbb;     //siva boja
+    font-size: 40px;
+    padding: 0;      
+    cursor: pointer; //stavlja cursor kao da pokazuje prstom
+}
+
+.star-rating label:hover,  //kada se redjaju onda je to siblings label i kada hoveruje preko njih prikaze se label
+.star-rating label:hover ~ label, // ovo iznad
+.star-rating input[type=radio]:checked ~ label { //funkcionise kao checkbox, gde kada se hoveruje i klikne on ga oboji u zuto
+    color: #f2b600;
+}
