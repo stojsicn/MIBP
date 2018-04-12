@@ -1,0 +1,10 @@
+#profile{
+    width: 330px;
+    height: 720px;
+    background: rgba(0,0,0,0.4);
+    padding: 40px;
+    color: white;
+    margin: 0 auto;
+    margin-top: 70px;
+    text-align: center;
+}

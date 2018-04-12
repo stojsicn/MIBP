@@ -1,0 +1,146 @@
+/* Navbar */
+
+.navbar-custom {
+    background-color: #222;
+}
+
+
+/* change the brand and text color */
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    text-decoration: none; color: #1DE9B6;
+    font-size: 1.8rem;
+}
+
+.nav-item
+{
+    padding: 5px 20px;
+    font-size: 1.3rem;
+}
+
+/* change the link color */
+
+.navbar-custom .navbar-nav .nav-link {
+   text-decoration: none; color: #fff;
+}
+
+
+/* change the color of active or hovered links */
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom  {
+  text-decoration: none;  color: #fff;
+}
+
+.nav-item .nav-link:hover {
+    text-decoration: none; 
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item:hover{
+    color: #fff;
+    font-weight: bold;
+}
+
+/* for dropdown only - change the color of dropdown */
+
+.navbar-custom .dropdown-menu {
+    background-color: #1DE9B6;
+}
+
+.navbar-custom .dropdown-item {
+    text-decoration: none; color: #fff;
+}
+
+.navbar-custom .dropdown-item:hover,
+.navbar-custom .dropdown-item:focus {
+    text-decoration: none; color: #fff;
+    background-color:#1DE9B6;
+}
+
+.navbar-toggler {
+    background-color: #fff;
+}
+.Buttons
+{
+	display: block;
+    padding: 10px 10px;
+}
+
+.Buttons .dugme {
+	display: inline;
+}
+.Buttons .dugme {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.3rem;
+    cursor: pointer; 
+}
+
+body{
+    background: url("https://cdn.flii.by/image/v4y505uo1sr.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#profile{
+    width: 500px;
+    height: 570px;
+    background: rgba(0,0,0,0.4);
+    padding: 40px;
+    color: white;
+    margin: 0 auto;
+    margin-top: 70px;
+    text-align: center;
+}
+#links
+{
+    color:#B300FF;
+}
+#slika
+{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.star-rating {
+    direction: rtl;
+    display: block;
+    padding: 0px;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    color: #bbb;
+    font-size: 40px;
+    padding: 0;
+    cursor: pointer; 
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type=radio]:checked ~ label {
+    color: #f2b600;
+}
+h5, p
+{
+    font-size: 15pt;
+}
+#name{
+    font-weight: bold;
+    letter-spacing: 5;
+}
+#icon-link:hover
+{
+    font-size: 1.6rem;
+    color:#1DE9B6;
+}
+#copy
+{
+    margin-left: 10px;
+    font-size: 20px;
+}

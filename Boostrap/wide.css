@@ -1,0 +1,13 @@
+#profile{
+    width: 500px;
+    height: 570px;
+    background: rgba(0,0,0,0.4);
+    padding: 40px;
+    color: white;
+    margin: 0 auto;
+    margin-top: 70px;
+    text-align: center;
+}
+#fluid{
+    height: auto;
+}

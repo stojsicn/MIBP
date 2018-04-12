@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+        <link rel="stylesheet" type="text/css" href="Kupus.css">
+        <script src="index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+        <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" media="screen and (min-width: 900px)" href="wide.css">
+        <link rel="stylesheet" media="screen and (max-width: 600px)" href="small.css">
+		<title>Aleksandar Kupusinac</title>
+	</head>
+
+	<body>
+        <nav class="navbar navbar-custom navbar-expand-lg">
+
+            <div class="Buttons">
+                <div class="dugme">
+                    <button onclick="javascript:history.go(-1)" id="back btn"><i  class="fas fa-angle-left"></i></button>
+                </div>
+                <div class="dugme sa marginom">
+                    <button onclick="javascript:history.go(+1)" id="forward btn"><i  class="fas fa-angle-right"></i></button>
+                </div>
+            </div>
+
+            <a id="name" class="navbar-brand" href="#">Aleksandar Kupusinac</a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                    
+                    
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                    
+                <ul class="navbar-nav mx-auto">
+                            
+                    <li class="nav-item">
+                                
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                
+                    </li>
+                            
+                <li class="nav-item dropdown">
+                                
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Kontakt</a>
+                                    
+                    <div class="dropdown-menu dropdown-menu-right">
+                                        
+                    <a id="email" class="dropdown-item" href="#">sasak@uns.ac.rs<button onclick="copyToClipboard('#email')" type="button" id="copy"><i  class="fas fa-clipboard"></i></button></a>
+                                        
+                    <a id="home" class="dropdown-item" href="#">Jugodrvo - Kabinet 141<button onclick="copyToClipboard('#home')" type="button" id="copy"><i  class="fas fa-clipboard"></i></button></a>
+
+                    <a id="phone" class="dropdown-item" href="#">021/485-2441<button onclick="copyToClipboard('#phone')" type="button" id="copy"><i  class="fas fa-clipboard"></i></button></a>
+                                    
+                </div></li>          
+                <li class="nav-item">
+                            
+                    <a class="nav-link" href="http://www.ftn.uns.ac.rs/2048309372/aleksandar-kupusinac">Profile</a>
+                        
+                </ul>
+                
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a id="icon-link" class="nav-link" href="mailto:sasak@uns.ac.rs"><i class="fas fa-envelope"></i></a>
+                </li> 
+                <li class="nav-item">
+                    <a id="icon-link" class="nav-link" href="Comment.html"><i class="fas fa-comment"></i></a>
+                </li>
+                </ul>       
+            </div>
+                
+        </nav>
+
+        <div id="fluid" class="container-fluid">
+            <div id="profile" class="container">
+                <img id="slika" src="https://i1.rgstatic.net/ii/profile.image/272658193448996-1442018188001_Q512/Aleksandar_Kupusinac.jpg" class="img-responsive">
+                <div class="star-rating">
+                    <input id="star-5" type="radio" name="rating" value="star-5">
+                    <label for="star-5" title="5 stars">
+                            <i class="active fa fa-star" aria-hidden="true"></i>
+                    </label>
+    
+                    <input id="star-4" type="radio" name="rating" value="star-4">
+                    <label for="star-4" title="4 stars">
+                            <i class="active fa fa-star" aria-hidden="true"></i>
+                    </label>
+    
+    
+                    <input id="star-3" type="radio" name="rating" value="star-3">
+                    <label for="star-3" title="3 stars">
+                            <i class="active fa fa-star" aria-hidden="true"></i>
+                    </label>
+                    
+                    <input id="star-2" type="radio" name="rating" value="star-2">
+                    <label for="star-2" title="2 stars">
+                            <i class="active fa fa-star" aria-hidden="true"></i>
+                    </label>
+    
+                    <input id="star-1" type="radio" name="rating" value="star-1">
+                    <label for="star-1" title="1 star">
+                            <i class="active fa fa-star" aria-hidden="true"></i>
+                    </label>
+                </div>
+                <h5>Profesor na <a id="links" href="http://www.ftn.uns.ac.rs/691618389/fakultet-tehnickih-nauka" target="_blank">FTN</a> | Profesor u <a id="links" href="http://jjzmaj.edu.rs/pocetna" target="_blank">GJJZ</a></h5>
+                <p>
+                    Aleksandar kupusinac je rodjen 1981. godine u Novom Sadu. Trenutno predaje predmete: Objektno orijentisano programiranje, kao i Statistiku. Takodje radi kao profesor razlicith strucnih predmeta u Gimnaziji Jovan Jovanovic Zmaj, gde pomaze mentalno retardiranoj deci. 
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
