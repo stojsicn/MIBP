@@ -1,0 +1,70 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    title
+  style.
+    ul{
+        text-align: center;
+    }
+  script.
+    function showCommentForm() {
+      document.getElementById("kantaforma").style.display="block";
+    }
+  body
+    #kantaforma.container(style='display: none;')
+      form#form_add_comment(name="add comment", method="POST", action="/professor/#{prof.name}")
+        .form-group
+          label(for='inputCommentID') CommentID
+            input#inputCommentID.form-control(type='text', aria-describedby='opisCommentID', placeholder='Unesite komentar ID')
+        .form-group
+          label(for='inputUsername') Username
+            input#inputUsername.form-control(type='text', aria-describedby='opisUsername', placeholder='Unesite vas username')
+        .form-group
+          label(for='inputKomentar') Komentar
+            input#inputComment.form-control(type='text', aria-describedby='opisComment', placeholder='Unesite vas komentar')
+            small#warining.form-text.text-muted Vas komentar ce biti vidljiv svim korisnicima!
+        button.btn.btn-primary(type='submit') Submit
+    .container-fluid
+      .jumbotron
+        h1.display-4 Prikaz profesora #{prof.name}
+        hr.my-4
+    .container-fluid
+      .container
+        .row
+          .col-sm-6.md-6
+            ul.list-group
+              li.list-group-item.active Ime: #{prof.name}
+              li.list-group-item Skola: #{prof.school}
+              li.list-group-item Sve ocene: #{prof.grades}
+              li.list-group-item Srednja ocena: #{prof.grade}
+          .col-sm-6.md-6
+            table.table.table-hover
+              thead
+                tr
+                  th(scope='col') ID
+                  th(scope='col') Username
+                  th(scope='col') Likes
+                  th(scope='col') Dislikes
+                  th(scope='col') Comment
+              tbody
+                each comm, i in CommentList
+                    tr
+                        th(scope="row") #{comm.id}
+                        td #{comm.username}
+                        td #{comm.likes}
+                        td #{comm.dislikes}
+                        td #{comm.comment}
+                tr
+                  th(scope='row') 001
+                  td Marko
+                  td 5
+                  td 2
+                  td Ma idemo breee
+              button.btn.btn-primary(type='button', onclick='showCommentForm()') Dodaj Komentar
+      script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')
